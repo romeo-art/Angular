@@ -1,0 +1,35 @@
+<div class="temp">
+    <div class="template">
+        <h2>Template-Driven</h2>
+    </div>
+    <form #form="ngForm" *ngIf="!submitted; else  result" (ngSubmit)="submitted=true">
+        <h5>Name: <input type="text" id="inputName" name="name" [(ngModel)]="fullname" required #name="ngModel" /></h5>
+        <div *ngIf="name.invalid && name.touched" class="alert alert-danger">
+            <div *ngIf="name.errors.required">Name is Required</div>
+        </div>
+        <h5>Email:<input id="inputEmail" type="text" [(ngModel)]="inputEmail" name="email" ngModel #email="ngModel"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required></h5>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)" class="alert alert-danger">
+            <div *ngIf="email.errors.required">Email is Required</div>
+            <div *ngIf="email.errors.pattern">Invalid Email</div>
+        </div>
+        <h5>Gender:
+            <select [(ngModel)]="tempGender" id="gender" name="select">
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+            </select>
+        </h5>
+        <br>
+        <button type="submit" [disabled]="form.invalid" id="sButton">Submit</button>
+    </form>
+    <br><br>
+</div>
+<ng-template #result>
+    <div>
+        <h5>Name:{{fullname}}</h5>
+        <h5>Email:{{inputEmail}}</h5>
+        <h5>Gender:{{tempGender}}</h5>
+        <br>
+        <button (click)="submitted=false">Edit</button>
+    </div>
+</ng-template>

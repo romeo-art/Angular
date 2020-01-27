@@ -1,0 +1,12 @@
+<div class="child">
+    <div class="childGrid">
+        <h2>Child Template</h2>
+        <p>Fullname: {{applicantInfo.name}}</p>
+        <p>Enrolled: {{applicantInfo.enrolled}}</p>
+        <p>Gender: {{applicantInfo.gender}}</p>
+        <button (click)="onApproved(approved)">Approved</button>
+        <button (click)="onDeclined(declined)">Declined</button><br><br><br>
+        <h1>List of Approved</h1>
+        <p *ngFor="let data of applicant">name:{{data.name}} status: {{data.enrolled}} gender: {{data.gender}}</p>
+    </div>
+</div>

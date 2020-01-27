@@ -1,0 +1,9 @@
+<h2 [class.withColor]="colored">{{text}}<h2>
+<div [style.background]="colored ? 'yellow' : 'gray'" [style.font-size]="colored ? '40px' : '50px'" [style.text-align]="colored ? 'center': 'default'">{{paragraph}}</div>
+<br>
+<button [style.background]="colored ? 'blue' : 'gray'" (click)="onClick()">{{submit}}</button>
+<button [style.background]="colored ? 'blue' : 'gray'" (click)="onClickNo()">{{submit1}}</button>
+<br><br>
+<div><img [src]='src'></div>
+<!-- <input type="text" [(ngModel)]="firstName">
+<input type="text" bindon-ngModel="firstName"> -->

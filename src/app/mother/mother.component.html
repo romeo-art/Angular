@@ -1,0 +1,6 @@
+<h2>Parent Template</h2>
+<input type="text" [(ngModel)]="tempdata"/>
+<button (click)="sent()">Send</button>
+<p>Message from child: {{message}}</p>
+<app-child (childEvent)="message=$event" [fromParent]="pdata"></app-child>
+    

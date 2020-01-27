@@ -1,0 +1,27 @@
+<div class="temp">
+    <div class="template">
+        <h2>Data-Driven</h2>
+    </div>
+    <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+        <h5>First Name: <input type="text" id="firstname" formControlName="myFname" /></h5>
+        
+        <h5>Last Name: <input type="text" id="lastname" formControlName="myLname" /></h5>
+
+        <h5>Email:<input id="email" type="text" name="email" formControlName="myEmail" ></h5>
+
+        <div class="template">
+            <h2>Address</h2><br>
+        </div>
+        <h5>Street: <input type="text" id="street" name="street" formControlName="myStreet" /></h5>
+        <h5>City: <input type="text" id="city" name="city" formControlName="myCity" /></h5>
+        <h5>State:<input type="text" id="state" name="email" formControlName="myState" /></h5>
+        <h5>Zip Code:<input type="text" id="zipcode" name="zipcode" formControlName="myZipCode" /></h5>
+
+        <br>
+        <button type="submit" [disabled]="!reactiveForm.valid" id="myButtonSubmit">Submit</button>
+        <br><br>
+    </form>
+</div>
+<div id="mydata">
+        <p>{{myData}}</p>
+</div>

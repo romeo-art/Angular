@@ -1,0 +1,24 @@
+.temp{
+    background-color:  rgb(32, 206, 250);
+    border: solid black 2px;
+    width: 350px;
+    text-align: center;
+}
+.template{
+    background-color: rgb(32, 217, 250);
+}
+#sButton{
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+}
+#inputName, #inputEmail{
+    height: 30px;
+    width: 245px;
+}
+#gender{
+    height: 38px;
+    width: 245px;
+}
+
+

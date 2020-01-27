@@ -1,0 +1,35 @@
+.temp{
+    background-color:  rgb(32, 206, 250);
+    border: solid black 2px;
+    /* width: 350px; */
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+.template{
+    background-color: rgb(32, 217, 250);
+}
+#sButton{
+    font-size: 20px;
+    font-weight: bold;
+    height: 40px;
+}
+input{
+    height: 30px;
+    width: 245px;
+    border-radius: 8px;
+}
+#gender{
+    height: 38px;
+    width: 245px;
+}
+#mydata{
+    background-color: aquamarine;
+}
+button{
+    height: 35px;
+    width: 80px;
+    border-radius: 8px;
+}
+
+
